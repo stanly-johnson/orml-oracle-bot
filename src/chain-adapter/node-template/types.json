@@ -1,0 +1,11 @@
+{
+    "CurrencyId": "u32",
+    "CurrencyIdOf": "u32",
+    "Share": "u32",
+    "Destination": {
+      "_enum": {
+        "Bank" : "Hash",
+        "Vln" : "AccountId"
+      }
+    }
+}

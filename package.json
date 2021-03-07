@@ -1,0 +1,29 @@
+{
+  "name": "oracle-bot",
+  "version": "0.0.1",
+  "description": "orml oracle data feeder",
+  "author": "Stanly Johnson <stanlyjohnson@outlook.com>",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "test": "mocha -r ts-node/register tests/**/*.test.ts",
+    "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^14.14.32",
+    "@types/node-fetch": "^2.5.8",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.1",
+    "chai": "^4.3.3",
+    "mocha": "^8.3.1",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.1.1",
+    "tslint": "^5.12.1",
+    "typescript": "^3.9.9"
+  }
+}
