@@ -33,6 +33,15 @@ Fetching prices..
 
 ### Supported Chains
 
-- [X] Valiu Liquidity Network
-- [X]  Default Node Template (with orml-oracle integrated)
+To add support for a new substrate chain implement your custom version of [ChainAdapter](./src/primitives/chain_adapter.ts). Refer examples [here](./src/chain-adapter).
+
+- Valiu Liquidity Network
+- Default Node Template (with orml-oracle integrated)
+
+### Supported Price Feeds
+
+To add support for a new price feed implement your custom version of [ExternalPriceAdapter](./src/primitives/external_price.ts). Refer examples [here](./src/price-adapter).
+
+- [Open Exchange Rates](https://openexchangerates.org)
+- [Coingecko](https://www.coingecko.com/api/documentations/v3)
 
