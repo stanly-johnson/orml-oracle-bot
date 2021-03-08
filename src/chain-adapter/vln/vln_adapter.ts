@@ -37,7 +37,7 @@ export class VlnOracleAdapter implements ChainAdapter {
   getVlnAssetFromString(currency : string) : Asset {
       switch(currency){
           case 'USDC' : return Asset.Usdv;
-          case 'VES' : return Asset.Fiat.Ves;
+          case 'VES' : return Asset.Fiat.Vez;
           case 'COP' : return Asset.Fiat.Cop;
           case 'USDV' : return Asset.Usdv;
           default : return Asset.Usdv
@@ -66,7 +66,7 @@ enum Collateral {
 
 enum Fiat {
     "Cop",
-    "Ves"
+    "Vez"
 }
 
 class Asset {
