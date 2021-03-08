@@ -4,8 +4,9 @@
   "description": "orml oracle data feeder",
   "author": "Stanly Johnson <stanlyjohnson@outlook.com>",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
-    "start": "tsc && node dist/src/index.js --experimental-modules",
+    "start": "tsc && node dist/src/index.js",
     "test": "mocha -r ts-node/register tests/**/*.test.ts",
     "coverage": "nyc -r text -e .ts -x \"tests/*.test.ts\" npm run test"
   },
