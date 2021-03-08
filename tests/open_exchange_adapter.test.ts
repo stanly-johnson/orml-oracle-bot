@@ -10,8 +10,8 @@ describe("OpenExchangeProvider works", function () {
     let result = await provider.fetchRates("USD", "USD");
     expect(result.USD).equal(1);
 
-    let result2 = await provider.fetchRates("BHD,USD", "USD");
-    expect(result2.BHD).equal(0.377115);
+    let result2 = await provider.fetchRates("KHR,USD", "USD");
+    expect(result2.KHR).to.be.an("number");
     expect(result2.USD).equal(1);
   });
 });
