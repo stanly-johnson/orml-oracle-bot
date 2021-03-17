@@ -1,14 +1,9 @@
 import { RegistryTypes } from '@polkadot/types/types'
 export const CUSTOM_TYPES: RegistryTypes = {
-  "Address": "MultiAddress",
-  "LookupSource": "MultiAddress",
-  "BlockNumber": "u32",
-  "Index": "u32",
-  "Balance": "u64",
   "Asset": {
     "_enum": {
       "Collateral": "Collateral",
-      "Fiat":"Fiat",
+      "Fiat": "Fiat",
       "Usdv": null
     }
   },
@@ -24,10 +19,18 @@ export const CUSTOM_TYPES: RegistryTypes = {
     ]
   },
   "CurrencyId": "Asset",
-  "CurrencyIdOf": "Asset",
-  "Share": "u32",
   "OracleKey": "Asset",
-  "OracleValue": "u32",
-  "Period": "u64",
-  "Phase": "u64"
+  "OracleValue": "FixedU128",
+  "CurrencyIdOf": "Asset",
+  "XCurrencyId": {
+    "chain_id": "ChainId",
+    "currency_id": "Asset"
+  },
+  "TimestampedValue": {
+    "value": "OracleValue",
+    "timestamp": "Moment"
+  },
+  "TimestampedValueOf" : "TimestampedValue",
+  "OrderedSet": "Vec<AccountId>",
+  "Share" : "Permill"
 }
