@@ -29,18 +29,20 @@ export class VlnOracleAdapter implements ChainAdapter {
   transform(prices: Record<string, number>) : Array<[Asset, number]> {
     let returnData : Array<[Asset, number]> = [];
     for (const [key, value] of Object.entries(prices)) {
+      console.log(this.getVlnAssetFromString(key));
         returnData.push([this.getVlnAssetFromString(key), value]);
       }
     return returnData;
   }
 
-  getVlnAssetFromString(currency : string) : Asset {
+  getVlnAssetFromString(currency : string) : Object {
+    console.log({currency});
       switch(currency){
-          case 'USDC' : return Asset.Usdv;
-          case 'VES' : return Asset.Fiat.Vez;
-          case 'COP' : return Asset.Fiat.Cop;
-          case 'USDV' : return Asset.Usdv;
-          default : return Asset.Usdv
+          case 'USDC' : return {"collateral" : "usdc"};
+          case 'VES' : return {"fiat" : "vez"};
+          case 'COP' : return {"fiat" : "cop"};
+          case 'USDV' : return {"usdv" : "usdv"};
+          default : return {"usdv" : "usdv"};
       }
   }
 }
