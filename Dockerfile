@@ -19,4 +19,4 @@ RUN npm build
 COPY .env ./dist/
 
 EXPOSE 4000
-CMD node ./dist/src/index.js
+CMD ["npm", "start"]
